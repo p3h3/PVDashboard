@@ -4,40 +4,39 @@ body {
 .wrapper {
     margin-left: auto;
     margin-right: auto;
-    width: 60%;
+    width: 90%;
     padding-right: 10px;
     padding-left: 10px;
 }
 
-input {
-    width : 150px;
-    margin: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+label{
+    font-size: 1.5vh;
 }
+
+input {
+    box-sizing: border-box;
+
+    font-size: 1.5vh;
+}
+button{
+    font-size: 1.5vh;
+}
+
 input[type=text] {
-  width:100%;
+    width:100%;
     padding: 12px 12px;
-        height: 10px;
 
     margin: 8px 0;
 }
 input[type=password] {
   width:100%;
     padding: 12px 12px;
-        height: 10px;
 
     margin: 4px 2px;
 }
 input[type=button] {
-    background-color: gray;
-    border: none;
-    color: black;
-    
-    text-decoration: none;
+
     font-weight: bold;
-        height: 20px;
 
     margin: 4px 2px;
     cursor: pointer;
@@ -53,23 +52,9 @@ input[type=button]:hover {
      text-align: center;
 }
 
-#messages {
-    margin-top: 12px;
-    margin-bottom: 12px;
-    padding: 12px;
-    width:100%;
-    display: inline-block;
-    border:1px solid black;
-    max-height: 250px;
-    min-height: 250px;
-    overflow: scroll;
+#gauges{
+    margin-top: 4vh;
 }
-#messages span {
-    overflow-y: scroll;
-    overflow: scroll;
-}
-
-
 
 #gauges div{
     width:100%;
@@ -78,11 +63,27 @@ input[type=button]:hover {
     border-top: 1px solid grey;
 }
 
+#gauges span{
+    font-size: 2vh;
+}
+
 
 #login-container{
     width:100%;
     display: flex;
     justify-content: space-between;
+
+    margin-bottom: 4vh;
+}
+
+#actionButtons{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+h1{
+    font-size: 3vh;
 }
 
 
