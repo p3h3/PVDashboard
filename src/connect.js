@@ -45,6 +45,30 @@ export default class connectLogic{
         },
 
         {
+            name: "bmsMinCellVoltage",
+            display: "Minimale Zellspannung",
+            topic: "pv-speicher-bms/sensor/pv-speicher-bms_min_cell_voltage/state"
+        },
+
+        {
+            name: "bmsMaxCellVoltage",
+            display: "Maximale Zellspannung",
+            topic: "pv-speicher-bms/sensor/pv-speicher-bms_max_cell_voltage/state"
+        },
+
+        {
+            name: "bmsCurrent",
+            display: "Strom",
+            topic: "pv-speicher-bms/sensor/pv-speicher-bms_current/state"
+        },
+
+        {
+            name: "bmsErrors",
+            display: "Fehler",
+            topic: "pv-speicher-bms/sensor/pv-speicher-bms_error/state"
+        },
+
+        {
             name: "bmsHeaterState",
             display: "Batterie Heizung",
             topic: "pv-speicher-bms/switch/heizung/state"
@@ -125,6 +149,7 @@ export default class connectLogic{
 
         for (const topic of this.topics) {
             this.client.subscribe(topic.topic);
+            console.log("subscribing to: " + topic.topic);
         }
     }
 

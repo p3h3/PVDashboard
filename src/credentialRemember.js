@@ -30,6 +30,9 @@ export default class credentialRememberer{
 
             if(this.passwordField.value === ""){
                 this.passwordField.value = localStorage.getItem("mqttPassword");
+
+                // simulate a connect click for nicer user experience
+                document.getElementById("connectButton").dispatchEvent(new Event("click"));
             }
         });
 
