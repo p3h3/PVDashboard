@@ -31,7 +31,7 @@ export default class connectLogic{
         },
         {
             name: "bmsCellDelta",
-            display: "Batteriezellspannungsdifferenz",
+            display: "Zellsp. delta",
             topic: "pv-speicher-bms/sensor/pv-speicher-bms_delta_cell_voltage/state"
         },
         {
