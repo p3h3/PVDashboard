@@ -14,7 +14,7 @@ export default class gauges{
 
         new connectLogic(this.setGauge.bind(this));
 
-
+/*
         setInterval(()=>{
             if(this.i > 3.5){
                 this.i = 2.4;
@@ -28,6 +28,8 @@ export default class gauges{
 
             this.i += 0.05;
         }, 500);
+
+ */
 
     }
 
