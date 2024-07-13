@@ -51,6 +51,12 @@ export default class connectLogic{
         },
 
         {
+            name: "bmsAvgCellVoltage",
+            display: "Durchschnittliche Zellspannung",
+            topic: "pv-speicher-bms/sensor/pv-speicher-bms_average_cell_voltage/state"
+        },
+
+        {
             name: "bmsMaxCellVoltage",
             display: "Maximale Zellspannung",
             topic: "pv-speicher-bms/sensor/pv-speicher-bms_max_cell_voltage/state"

@@ -1,4 +1,5 @@
 import connectLogic from "./connect";
+import {calculateSOC} from "./calculateVOCSOC";
 
 export default class gauges{
 
@@ -6,10 +7,28 @@ export default class gauges{
 
     experte;
 
+    i = 2.4;
+
     constructor(experte = false){
         this.experte = experte;
 
         new connectLogic(this.setGauge.bind(this));
+
+
+        setInterval(()=>{
+            if(this.i > 3.5){
+                this.i = 2.4;
+            }
+            this.setGauge({
+                name: "bmsVOCSOC",
+                display: "BatterieLadestand Spannung"
+            }, (100 * calculateSOC(this.i)).toFixed(0));
+
+            console.log("voltage: " + this.i.toFixed(2) + " soc: " + calculateSOC(this.i).toFixed(2));
+
+            this.i += 0.05;
+        }, 500);
+
     }
 
     setGauge(topic, payload){
@@ -33,7 +52,16 @@ export default class gauges{
             }
         }
 
+
+        if(topic.name === "bmsAvgCellVoltage"){
+            this.setGauge({
+                name: "bmsVOCSOC",
+                display: "BatterieLadestand Spannung"
+            }, (100 * calculateSOC(parseFloat(payload))).toFixed(0));
+        }
+
         let valueSpan = document.createElement("span");
+
         valueSpan.innerHTML = payload;
 
         valueSpan.classList.add("updated");
