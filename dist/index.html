@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>PV Dashboard</title>
+   <script defer src="main.js"></script></head>
+   <body>
+      <div class="wrapper">
+         <h1 id="Main_heading"> <b>PV Anlage</b></h1><br><br>
+         <div id="login-container">
+            <button id="login-save">Login Daten Speichern</button>
+            <button id="login-load">Login Daten Laden</button>
+         </div>
+         <form id="connection-information-form">
+
+            <label for="host">Hostname or IP Address and Port Number:</label>
+            <input id="host" type="text" name="host" value="212.227.225.97">
+
+            <label for="username">Username:</label>
+            <input id="username" type="text" name="Username" placeholder="Username"><br>
+            <label for="password">Password:</label>
+            <input id="password" type="password" name="password" placeholder="password"><br>
+
+            <label for="experte">Experte:</label>
+            <input type="checkbox" id="experte"><br>
+
+            <input type="button" id="connectButton" value="Connect">
+            <input type="button" id="disconnectButton" value="Disconnect">
+
+            <br>
+
+         </form>
+
+         <div id="gauges">
+            <h1>Wechselrichter</h1>
+            <div id="inverterTemp"></div>
+            <div id="inverterPAC"></div>
+
+            <h1>Batterie</h1>
+            <div id="bmsTemp"></div>
+            <div id="bmsPower"></div>
+            <div id="bmsCellDelta"></div>
+            <div id="bmsSOC"></div>
+            <div id="bmsCylcles"></div>
+            <div id="bmsVOCSOC"></div>
+            <div id="bmsAvgCellVoltage"></div>
+            <div id="bmsMinCellVoltage"></div>
+            <div id="bmsMaxCellVoltage"></div>
+            <div id="bmsCurrent"></div>
+            <div id="bmsErrors"></div>
+            <div id="bmsHeaterState"></div>
+         </div>
+
+
+         <div id="actionButtons">
+            <button id="heizung-an">Heizung einschalten</button>
+            <button id="heizung-aus">Heizung ausschalten</button>
+         </div>
+
+      </div>
+   </body>
+</html>
